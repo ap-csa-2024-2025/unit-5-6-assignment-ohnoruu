@@ -2,8 +2,17 @@ import java.util.Scanner;
 
 public class Main
 {
+  public static void initDog(Dog iDog, String breed, String name, String color, double weight){
+    iDog.setBreed(breed);
+    iDog.setName(name);
+    iDog.setColor(color);
+    iDog.setWeight(weight);
+  }
+
   public static void main(String[] args)
   {
+    Dog d = new Dog("big red dog", "clifford", "red", 150000);
+
     // Uncomment and complete the code below to test your Plane class
     /* Delete this line to uncomment code **************************
     Scanner sc = new Scanner(System.in);
