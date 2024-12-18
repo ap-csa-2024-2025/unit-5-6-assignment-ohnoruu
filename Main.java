@@ -12,9 +12,10 @@ public class Main
   public static void main(String[] args)
   {
     Dog d = new Dog("big red dog", "clifford", "red", 150000);
+    Student s = new Student(12345, 11, "Bob");
+    System.out.println(s.toString());
 
     // Uncomment and complete the code below to test your Plane class
-    /* Delete this line to uncomment code **************************
     Scanner sc = new Scanner(System.in);
     String input = "";
     Plane p = new Plane(1000);
@@ -27,18 +28,24 @@ public class Main
 
       if (input.equals("u"))
       {
-        // move the plane upwards
+        p.upward();
+        System.out.println(p.toString());
+        System.out.println(p.getLocation());
       }
       else if (input.equals("d"))
       {
-        // move the plane downwards
+        p.downward();
+        System.out.println(p.toString());
+        System.out.println(p.getLocation());
       }
       else if (input.equals("n"))
       {
         System.out.println("Starting location for a new plane?");
         int location = sc.nextInt();
         sc.nextLine(); // consume the ENTER key left behind by nextInt()
-        p = // create new plane at proper location
+        p = new Plane(location);
+        System.out.println(p.toString());
+        System.out.println(p.getLocation());
       }
       else if (input.equals("q"))
       {
@@ -49,6 +56,5 @@ public class Main
         System.out.println("Invalid input");
       }
     }
-    Delete this line to uncomment ************************************/
   }
 }

@@ -7,16 +7,14 @@ public class Dog
 
   //Constructors
   public Dog(){
-    breed = "dawg";
-    name = "zawg";
-    color = "black";
-    weight = 1;
+    this("dawg", "zawg", "black", 1);
   }
+  
   public Dog(String iBreed, String iName, String iColor, double iWeight){
     breed = iBreed;
     name = iName;
     color = iColor;
-    weight = iWeight;
+    setWeight(iWeight);
   }
   public Dog(String iBreed, String iName){
     breed = iBreed;
@@ -26,12 +24,16 @@ public class Dog
   }
 
   // Make setters
-  public void setBreed(String iBreed)
+  public void setBreed(String breed)
   {
-    breed = iBreed;
+    this.breed = breed;
   }
   public void setWeight(double iWeight){
-    weight = iWeight;
+    if (iWeight < 0){
+      weight = 0;
+    } else {
+      weight = iWeight;
+    }
   }
   public void setName(String iName){
     name = iName;
